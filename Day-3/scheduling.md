@@ -19,7 +19,12 @@ spec:
 
 - If the nodeName field is not specified, then the pod will be scheduled to a node based on the default scheduling algorithm.
 - If the nodeName specified in the pod definition file does not exist, then the pod will remain in the pending state.
-- By default this changes will only apply to the next scheduling of the pod. If you want to apply this change to the existing pod, then you need to delete the pod and recreate it.
+- By default this changes will only apply to the next scheduling of the pod. If you want to apply this change to the existing pod, then you need to delete the pod and recreate it. Or you can use the replace command-
+
+k replace --force -f nginx.yaml - it will delete the pod and recreate it with the yaml file
+
+You cant simply moce the pod from one system to another, it can only be destroyed and created in a new node/system.
+
 - To specify node for existing pod, We have to create a binding object and then send post request to the pod binding API server.
 - Binding object is defined in the below syntax:
 
