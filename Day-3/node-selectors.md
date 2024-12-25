@@ -20,6 +20,12 @@ spec:
         size: Large
 ```
 
+But before this we should have a label assigned to our node so that nodeselector can fetch the key/value to assgin the pod to the node acc to the nodeSelector.
+
+To assign a label to your node you can run this command-
+
+k label node <nodename> key=value
+
 - The above node selector will ensure that the pod is scheduled on a node with the label size=Large.
 
 Date of Commit: 05/03/2024
