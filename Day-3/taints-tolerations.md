@@ -6,8 +6,7 @@
 - Taints are set on nodes.
 - Taints are key-value pairs.
 - Taints have three components:
-  - Key
-  - Value
+  - Key: Value
   - Effect
 - Taint Effect:
     - NoSchedule: New pods will not be scheduled on the node.
