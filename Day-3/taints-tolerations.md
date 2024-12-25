@@ -55,4 +55,10 @@ kubectl taint nodes node01 key1:taint-effect-
 - The above toleration will allow the pod to be scheduled on a node with a taint key1=value1:NoSchedule.
 - If a pod has multiple tolerations, then the pod will be scheduled on a node with any of the matching taints.
 
+to remove the taint, use the taint command as it is but assign a '-' at the end of the command
+k taint node conttrolpane node-role.kubernetes.io/control-plane:NoSchedule
+
+grep the taint by using 
+k describe node "nodename" | grep Taint
+
 Date of Commit: 05/03/2024
