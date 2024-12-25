@@ -25,6 +25,7 @@ But before this we should have a label assigned to our node so that nodeselector
 To assign a label to your node you can run this command-
 
 k label node <nodename> key=value
+k label node node-1 size=Large
 
 - The above node selector will ensure that the pod is scheduled on a node with the label size=Large.
 
