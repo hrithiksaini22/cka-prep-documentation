@@ -17,6 +17,10 @@
 ```bash
 kubectl taint nodes node01 key1=value1:taint-effect
 ```
+
+controlplane ~ ✖ k taint node node01 spray=mortein:NoSchedule
+node/node01 tainted
+
 - Use the below command to remove a taint from a node:
 ```bash
 kubectl taint nodes node01 key1:taint-effect-
