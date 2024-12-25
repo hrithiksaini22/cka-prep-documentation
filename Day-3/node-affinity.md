@@ -33,6 +33,16 @@ spec:
   - **requiredDuringSchedulingIgnoredDuringExecution:** If the rules are not met, the pod will not be scheduled.
   - **preferredDuringSchedulingIgnoredDuringExecution:** If the rules are not met, the pod will still be scheduled, but the scheduler will try to prioritize the nodes that match the rules.
 
+Suppose you want to deploy the pod only in one node using node affinity -
+``` bash
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: node-role.kubernetes.io/control-plane
+                operator: Exists
+```
 You can set many other rules using node affinity. Refer to the official Kubernetes documentation: [Node Affinity](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#node-affinity)
 
 Date of Commit: 05/03/2024
