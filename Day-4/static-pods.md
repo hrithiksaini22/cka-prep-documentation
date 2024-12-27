@@ -19,3 +19,27 @@
 - If the file is deleted from the location mentioned in the kubelet configuration file, then the kubelet will delete the pod.
 
 Date of Commit: 06/03/2024
+
+personal
+
+1) How many static pods exist in this cluster in all namespaces?
+   Run the command kubectl get pods --all-namespaces and look for those with -controlplane appended in the name
+2) What is the path of the directory holding the static pod definition files?
+   Run the command ps -aux | grep kubelet and identify the config file - --config=/var/lib/kubelet/config.yaml. Then check in the config file for staticPodPath.
+![image](https://github.com/user-attachments/assets/a0fee5ff-daec-45ad-955e-6e103e1a6a4e)
+
+3) how to delete a static pod?
+a) check on which node is the pod running- k get pods -A -o wide
+b) ssh to the node by - ssh node01
+c) now we have to delete the manifest file so that kubelet doesnt spin up the pods again, hence we fist SSH to node01 and identify the path configured for static pods in this node.
+
+Important: The path need not be /etc/kubernetes/manifests. Make sure to check the path configured in the kubelet configuration file.
+now first find the location to the kubelet config file beacuse from there you can find the directory path where the manifest files are present so that kubelet can run the pods using those manifesst files-
+ps -aux | grep kubelet
+now check for --config path
+open the config.yaml
+![image](https://github.com/user-attachments/assets/4401e32d-636d-4ffc-9395-9c15a43b7994)
+find the static pod path
+![image](https://github.com/user-attachments/assets/cf18887b-33f7-4d64-b236-ee3c0cf72f1c)
+
+5) 
