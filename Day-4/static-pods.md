@@ -32,7 +32,7 @@ personal
 3) how to delete a static pod?
 you can simply delete the pod but the kubelet would redeploy the container from the manifest files fiectory it monitors. Hence delete the deployemnt file from the manifest folder and kubelet would recreate the pod after deleting. 
 a) check on which node is the pod running- k get pods -A -o wide
-b) ssh to the node by - ssh node01
+b) ssh to the node by - ssh (node01 or use the internal ip of the node)
 c) now we have to delete the manifest file so that kubelet doesnt spin up the pods again, hence we fist SSH to node01 and identify the path configured for static pods in this node.
 
 Important: The path need not be /etc/kubernetes/manifests. Make sure to check the path configured in the kubelet configuration file.
