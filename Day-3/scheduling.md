@@ -25,7 +25,7 @@ k replace --force -f nginx.yaml - it will delete the pod and recreate it with th
 
 You cant simply moce the pod from one system to another, it can only be destroyed and created in a new node/system.
 
-- To specify node for existing pod, We have to create a binding object and then send post request to the pod binding API server.
+- To specify a new node for existing pod, We have to create a binding object and then send post request to the pod binding API server.
 - Binding object is defined in the below syntax:
 
 ```yaml
@@ -41,3 +41,5 @@ target:
 - While sending the request we have to convert the binding object from yaml to json format.
 
 Date of Commit: 05/03/2024
+
+Usually how cube scheduler works is, when a pod definition is applied it looks after the Manifest file and checks whether there is any manual scheduling done or not if there isn't any manual scheduling, then kube scheduler runs the algorithm to filter and find a node to place the pod upon and then After cube scheduler finds a node to deploy the pod upon, it launches a binding object that writes the node name inside the port definition file and then launches the pod inside the node using that binding object
