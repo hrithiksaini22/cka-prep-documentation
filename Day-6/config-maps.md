@@ -40,7 +40,7 @@ kubectl describe configmap <configmap-name>
 
 ### Use a ConfigMap as environment variables
 
-- Use the below definition file to use a ConfigMap as environment variables using `envFrom` field:
+- Use the below definition file to use a ConfigMap as environment variables using `envFrom` field which inserts alls the values fron the configmap config file:
 ```yaml
 apiVersion: v1
 kind: Pod
@@ -55,7 +55,7 @@ spec:
         name: <configmap-name>
 ```
 
-- Use the below definition file to use a ConfigMap as environment variables using `env` field:
+- Use the below definition file to use a ConfigMap as environment variables using `env` field to insert selected values from the config map:
 ```yaml
 apiVersion: v1
 kind: Pod
