@@ -39,4 +39,16 @@ docker run --entrypoint sleep2.0 <image-name> 20
 - In Kubernetes, the `command` will override the `ENTRYPOINT` of the Docker image Dockerfile.
 - The `args` will override the `CMD` of the Docker image Dockerfile.
 
+another way to mention the commands is-
+
+spec:
+  containers:
+  - name: ubuntu
+    image: ubuntu
+    command:
+      - "sleep"
+      - "1200"
+
+
+
 Date of Commit: 08/03/2024
