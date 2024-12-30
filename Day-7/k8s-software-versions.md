@@ -14,6 +14,6 @@
 ### Other Notes
 - Only 3 versions are supported at a time. The oldest version will be removed when a new version is released.
 - All the Kubernetes components like **kube-apiserver, kube-controller-manager, kube-scheduler, kubelet, kube-proxy** should be of the same version as the Kubernetes version of the nodes.
-- **etcd** version should be different from the Kubernetes version. It should be compatible with the Kubernetes version. We can find the compatible **etcd** version in the Kubernetes release notes.
+- **etcd and CoreDNS** version should be different from the Kubernetes version. It should be compatible with the Kubernetes version. We can find the compatible **etcd** version in the Kubernetes release notes.
 
 Date of Commit: 09/03/2024
