@@ -41,3 +41,14 @@ ETCDCTL_API=3 etcdctl  snapshot status /path/to/snapshot.db
 
 
 Date of Commit: 09/04/2024
+
+*personal*
+1) Where is the ETCD server certificate file located?
+inside pod def file of etcd pod 
+--cert-file=/etc/kubernetes/pki/etcd/server.crt
+
+2) Where is the ETCD CA Certificate file located?
+Check the ETCD pod configuration with the command: kubectl describe pod etcd-controlplane  -n kube-system and look for the value of --trusted-ca-file:
+--trusted-ca-file=/etc/kubernetes/pki/etcd/ca.crt 
+3) key is key_file eg:  --key-file=/etc/kubernetes/pki/etcd/server.key
+4) endpoint is in --listen-client-urls=https://127.0.0.1:2379
