@@ -105,14 +105,14 @@ k get nodes
 
 #### notes
 
-###1) there are two ways in which we can run a service i.e via the pod and other one is starting the app as a daemon service via systemctl.
+**1)** there are two ways in which we can run a service i.e via the pod and other one is starting the app as a daemon service via systemctl.
 a) as pod- kubeadm starts the core system services via manifest files saved in /etc/kubernetes/manifests/ dir. Make changes to the pod def file here, eg: updating etcd manifest file to mount new folder, where the new backuup is saved. 
 
-###2) whwn we start an app as a service , we mention the .service for configuring the app and start it via systemctl start command. 
+**2)** whwn we start an app as a service , we mention the .service for configuring the app and start it via systemctl start command. 
 -the file ca be found in /etc/systemd/system/<service_name>.service path
 whenever we edit the service file, we restart the service always to apply the changes. 
-###3) 
-The kubectl config use-context command is used to switch between multiple Kubernetes clusters in your kubeconfig file. When you have multiple clusters (like Cluster1 and Cluster2) configured, each has its own context (combination of cluster, user, and namespace).
+
+**3)** The kubectl config use-context command is used to switch between multiple Kubernetes clusters in your kubeconfig file. When you have multiple clusters (like Cluster1 and Cluster2) configured, each has its own context (combination of cluster, user, and namespace).
 
 By running kubectl config use-context context-name, you tell kubectl which cluster to interact with. Without this command, kubectl won't know which cluster to use when you run commands, so it defaults to the current context.
 
