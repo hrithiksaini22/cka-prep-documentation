@@ -102,3 +102,11 @@ Make sure to switch the context to cluster1:
 
 kubectl config use-context cluster1
 k get nodes
+
+#### notes
+
+1) there are two ways in which we can run a service i.e via the pod and other one is starting the app as a daemon service via systemctl.
+a) as pod- kubeadm starts the core system services via manifest files saved in /etc/kubernetes/manifests/ dir. Make changes to the pod def file here, eg: updating etcd manifest file to mount new folder, where the new backuup is saved. 
+2) whwn we start an app as a service , we mention the .service for configuring the app and start it via systemctl start command. 
+-the file ca be found in /etc/systemd/system/<service_name>.service path
+whenever we edit the service file, we restart the service always to apply the changes. 
