@@ -93,3 +93,12 @@ Note 3: This is the simplest way to make sure that ETCD uses the restored data a
 
 
 If you do change --data-dir to /var/lib/etcd-from-backup in the ETCD YAML file, make sure that the volumeMounts for etcd-data is updated as well, with the mountPath pointing to /var/lib/etcd-from-backup (THIS COMPLETE STEP IS OPTIONAL AND NEED NOT BE DONE FOR COMPLETING THE RESTORE)
+
+
+2) How many clusters are defined in the kubeconfig on the student-node?
+      k config get-clusters
+3) How many nodes (both controlplane and worker) are part of cluster1?
+Make sure to switch the context to cluster1:
+
+kubectl config use-context cluster1
+k get nodes
