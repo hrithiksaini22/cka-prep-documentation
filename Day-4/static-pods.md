@@ -46,4 +46,7 @@ open the config.yaml
 find the static pod path
 ![image](https://github.com/user-attachments/assets/cf18887b-33f7-4d64-b236-ee3c0cf72f1c)
 
-5) 
+5) how many static pods are there in the cluster?
+   enter command - k get pods -A and then search for the pods with the name of the nodes appended at the end of the pod name-
+eg-
+![image](https://github.com/user-attachments/assets/2c759deb-f318-4e43-9083-5c9b6f26aee1)
