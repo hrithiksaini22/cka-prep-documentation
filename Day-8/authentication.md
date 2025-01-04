@@ -5,14 +5,17 @@
 
 ### Authentication in Kubernetes
 
-- Most of time users like admin and devs need to authenticate with `kube-apiserver` to access the cluster.
+- Most of time users like admin and devs need to authenticate with `kube-apiserver` to access the cluster before api server processes the other requests.
 - There is many ways to authenticate with kube-apiserver.
 - The two most basic ways are:
-    - Static Password File
-    - Static Token file
+    - Static Password File - has pass, username, userid (csv-file type)
+    - Static Token file - 
+    - others are certificates and indentity services(3rd party auth rpotocols like LDAP, Kerberos).
 - We need to have our users password or token along with username and user-id in a file.
-- Then we have to pass the file to the kube-apiserver using the `--basic-auth-file` or `--token-auth-file` flags.
-- For static password file, we can authenticate using the `curl -v -k https://master-node-ip:6443/api/v1/pods -u "user1:password123" ` command.
+- Then we have to pass the file to the kube-apiserver by mentioning the file in kube-apiserver.service or kubeapiserver pod def file(if launched as a pod) using the `--basic-auth-file=user-details.csv` or `--token-auth-file=user-details.csv` (if using token file) flags. After updating the .service file, always restart the service. 
+
+- For authenticating a user using basic user and pass, we can authenticate using the `curl -v -k https://master-node-ip:6443/api/v1/pods -u "user1:password123" ` command.
+
 - For static token file, we can authenticate using the `https://master-node-ip:6443/api/v1/pods --header "Authorization: Bearer KpjCVbI7rCFAHYPkBzRb7gu1cUc4B" "Authorization
 
 ### Important Note
