@@ -23,7 +23,7 @@
 
 ### Other notes about kubectl
 - We can't create a user using the `kubectl` command.
-- But we do have a concept called `ServiceAccount` which is used to authenticate the pods to the API server. We can create a `ServiceAccount` using the `kubectl` command.
+- But we do have a concept called `ServiceAccount` which is used to authenticate different services to the API server. We can create a `ServiceAccount` using the `kubectl` command.
 
 
 Date of Commit: 10/04/2024
