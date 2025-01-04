@@ -5,7 +5,7 @@
 
 ### Authentication in Kubernetes
 
-- Most of time we need to have authenticate with `kube-apiserver` to access the cluster.
+- Most of time users like admin and devs need to authenticate with `kube-apiserver` to access the cluster.
 - There is many ways to authenticate with kube-apiserver.
 - The two most basic ways are:
     - Static Password File
