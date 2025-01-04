@@ -43,6 +43,9 @@ Suppose you want to deploy the pod only in one node using node affinity -
               - key: node-role.kubernetes.io/control-plane
                 operator: Exists
 ```
+how this works is-
+The key: node-role.kubernetes.io/control-plane with the operator: Exists means that the pod can only be scheduled on nodes that have this label key, regardless of its value. This is a useful way to restrict pods to specific types of nodes, such as control-plane nodes, in a Kubernetes cluster.
+
 You can set many other rules using node affinity. Refer to the official Kubernetes documentation: [Node Affinity](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#node-affinity)
 
 Date of Commit: 05/03/2024
