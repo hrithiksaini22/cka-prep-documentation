@@ -17,3 +17,4 @@
 - As well as `kubelet` and `kube-api server` are clients to each other. We can use the same keys(their server keys) for `kube-api-server` and `kubelet` also or we can also create a new one(clinet keys for `kubelet` and server keys for `kube-api-server).
 
 Date of Commit: 10/04/2024
+![WhatsApp Image 2025-01-04 at 23 19 15_12f8e43f](https://github.com/user-attachments/assets/854be731-363d-4d8a-b8ba-117dfb66a63d)
