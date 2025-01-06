@@ -63,3 +63,13 @@ kubectl auth can-i get pods --as user1
 - We can use the same definition file for ClusterRole and ClusterRoleBinding, just remove the namespace from the definition file. And specify Cluster Level resources in the resources field.
 
 Date of Commit: 11/03/2024
+
+### create clusterrole and clusterrolebinding using imeprative commands-
+1) k create clusterrole <role-name> --verb=get,list,delete,watch --resource=nodes,persistentvolumes
+2) k create clusterrolebindings <name> --clusterrole=<role-name> --user=michelle
+**Tip** to view the api resources to find the resource names and their apiVersion-
+   kubectl api-resources
+![WhatsApp Image 2025-01-06 at 02 36 42_ab117d63](https://github.com/user-attachments/assets/db94d7e4-c51f-4370-9184-4aaf8324be8b)
+
+
+
