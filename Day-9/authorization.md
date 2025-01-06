@@ -4,19 +4,20 @@
 
 ### Types of Authorization:
 
-- RBAC
+- RBAC (external auth i.e from outside the core cluster eg users, etc)
 - Node Authorization
-- Webhook Mode
-- ABAC
+- Webhook Mode (external auth i.e from outside the core cluster eg users, etc)
+- ABAC (external auth i.e from outside the core cluster eg users, etc)
 
-### Node Authorization:
-
+### Node Authorization(internal authorization i.e within cluster):
+- if a node is introduced to a cluster and it has kubelet setup, the kubelet requires a set of permissions to read, write from the api server. This authorization for the node is done by the node authorizer. Hence any request comming from the group SYSTEM:NODE is forwarded to the Node Authorizer and permissions are alloted accordingly.
+  ---------------------
 - If we add a component to system:node group. It will get all the permissions of the system:node group
 - Example: Adding kubelet to system:node group, Because kubelet need some access to the API server to schedule the pods and to get the pod details.
 - system:node permissions:
     - Read Services, Endpoints, Nodes, Pods
     - Write Node status, Pod status, events
-
+------------------------
 ### ABAC:
 
 - It involves attach Policy to user sor groups directly.
