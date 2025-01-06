@@ -71,5 +71,16 @@ Date of Commit: 11/03/2024
    kubectl api-resources
 ![WhatsApp Image 2025-01-06 at 02 36 42_ab117d63](https://github.com/user-attachments/assets/db94d7e4-c51f-4370-9184-4aaf8324be8b)
 
+This can be used to find the apigroups and resource for making the Role config file 
 
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: default
+  name: pod-reader
+rules:
+- apiGroups: [""]  ----------
+  resources: ["pods"] ----------
+  resourceNames: ["my-pod"] # If we want to restrict the access to specific pod
+  verbs: ["get", "watch", "list"]
 
