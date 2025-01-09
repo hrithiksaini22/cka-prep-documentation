@@ -74,3 +74,12 @@ $ kubectl get pods --kubeconfig /path/to/config
 ```
 
 Date of Commit: 11/03/2024
+
+***Questions***
+
+1)I would like to use the dev-user to access test-cluster-1. Set the current context to the right one so I can do that.
+
+To use that context, run the command: kubectl config --kubeconfig=/root/my-kube-config use-context research
+
+To know the current context, run the command: kubectl config --kubeconfig=/root/my-kube-config current-context
+
