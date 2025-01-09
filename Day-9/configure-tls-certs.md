@@ -17,6 +17,7 @@ $ openssl genrsa -out ca.key 2048
 ```bash
 $ openssl req -new -key ca.key -subj "/CN=kube-ca" -out ca.csr
 ```
+here the CN=certificate name
 #### Step 3: Sign the Certificate:
 ```bash
 $ openssl x509 -req -in ca.csr -signkey ca.key -out ca.crt
