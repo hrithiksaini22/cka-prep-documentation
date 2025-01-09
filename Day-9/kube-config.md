@@ -83,3 +83,18 @@ To use that context, run the command: kubectl config --kubeconfig=/root/my-kube-
 
 To know the current context, run the command: kubectl config --kubeconfig=/root/my-kube-config current-context
 
+2) We don't want to specify the kubeconfig file option on each kubectl command.
+
+Set the my-kube-config file as the default kubeconfig file and make it persistent across all sessions without overwriting the existing ~/.kube/config. Ensure any configuration changes persist across reboots and new shell sessions.
+
+A-Add the my-kube-config file to the KUBECONFIG environment variable.
+
+Open your shell configuration file:
+vi ~/.bashrc
+Add the following line to export the variable:
+export KUBECONFIG=/root/my-kube-config
+Apply the Changes:
+
+Reload the shell configuration to apply the changes in the current session:
+
+source ~/.bashrc
