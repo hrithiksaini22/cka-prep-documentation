@@ -23,3 +23,4 @@ kubectl api-resources
 - So instead of using `curl https://kube-master:6443`, we can use `curl http://localhost:8001`. So the request will be forwarded to the kube-apiserver.
 
 Date of Commit: 11/03/2024
+![WhatsApp Image 2025-01-09 at 01 57 50_6b019105](https://github.com/user-attachments/assets/4fb66c91-40ca-4de5-998a-fba271f359e5)
