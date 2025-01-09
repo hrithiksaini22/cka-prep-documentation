@@ -32,11 +32,14 @@ $ openssl x509 -req -in ca.csr -signkey ca.key -out ca.crt
 ```bash
 $ openssl genrsa -out server.key 2048
 ```
+doc ref- https://kubernetes.io/docs/tasks/administer-cluster/certificates/
 
 #### Step 2: Generate Certificate Signing Request:
 ```bash
 $ openssl req -new -key server.key -subj "/CN=kube-apiserver" -out server.csr
 ```
+
+doc ref- https://kubernetes.io/docs/reference/access-authn-authz/authentication/
 
 #### Step 3: Sign the Certificate:
 ```bash
