@@ -50,5 +50,6 @@ $ kubectl get csr user-request -o yaml
 - We just have to create the CertificateSigningRequest object and the Controller Manager will take care of the rest.
 - We need to mention the `ca.crt and ca.key` file in the `--cluster-signing-cert-file` and `--cluster-signing-key-file` flags in the Controller Manager component.
 
+![WhatsApp Image 2025-01-08 at 22 50 10_b1a6b1e7](https://github.com/user-attachments/assets/b68730c2-f26f-4e1f-a525-5aac60ac6ce2)
 
 Date of Commit: 11/03/2024
