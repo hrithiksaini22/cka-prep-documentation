@@ -1,6 +1,6 @@
 ## Security Context
 by default docker runs the containers as root user hence it shares all the resources but  docker also restricts the containerso that it cant reboot or perform the operations that can disrupt the host. You can still add capabilities using the --cap-add= 0r --cap-drop= while running the container.
-
+ you can also define the id of the user using docker run --user=1000 xyz
 ![WhatsApp Image 2025-01-10 at 02 21 28_b4e61d2c](https://github.com/user-attachments/assets/d8028887-0410-48c8-9c67-5b2d56771d2f)
 
 
