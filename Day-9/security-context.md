@@ -1,4 +1,8 @@
 ## Security Context
+by default docker runs the containers as root user hence it shares all the resources but  docker also restricts the containerso that it cant reboot or perform the operations that can disrupt the host. You can still add capabilities using the --cap-add= 0r --cap-drop= while running the container.
+
+![WhatsApp Image 2025-01-10 at 02 21 28_b4e61d2c](https://github.com/user-attachments/assets/d8028887-0410-48c8-9c67-5b2d56771d2f)
+
 
 - Security Context is a property of the pod or container that defines the security settings for a pod or container.
 - For Example, We can define the user who can run the process inside the container, we can define the group, we can define the capabilities, we can define the SELinux options, we can define the AppArmor profile, we can define the seccomp profile, etc.
