@@ -24,5 +24,6 @@ docker volume ls
 
 - Container Storage Interface (CSI) is a standard for exposing arbitrary block and file storage systems to containerized workloads on Container Orchestration Systems like Kubernetes.
 - It is a standard that is implemented by the storage vendors to provide the storage to the containerized workloads.
+![WhatsApp Image 2025-01-11 at 21 27 30_71fe355f](https://github.com/user-attachments/assets/5a57dee5-9327-4673-a7e6-d9cf50168b7c)
 
 Date of Commit: 12/03/2024
