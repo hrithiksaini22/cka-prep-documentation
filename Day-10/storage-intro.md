@@ -16,6 +16,7 @@
 docker volume ls
 ```
 - Depending upon the requirement, we can use the volume driver plugins to manage the volumes.
+![WhatsApp Image 2025-01-11 at 21 16 10_91f1386e](https://github.com/user-attachments/assets/ee15c4c1-0c29-46d5-80db-fdd69a5915cd)
 
 ### Container Storage Interface (CSI)
 
