@@ -11,6 +11,8 @@
 
 - Actually, Docker uses the volume driver plugins to manage the storage drivers. Volume driver plugin provides volumes.
 - We can use the following command to list the volume driver plugins:
+- local is the deafult volume driver plugin
+![WhatsApp Image 2025-01-11 at 21 23 09_4e99386e](https://github.com/user-attachments/assets/5be50a85-8234-486d-9bbc-d60efb6808e6)
 
 ```bash
 docker volume ls
