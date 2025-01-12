@@ -9,7 +9,7 @@
 
 ### Volume driver plugins in Docker
 
-- Actually, Docker uses the volume driver plugins to manage the storage drivers which provides storage volumes.
+- Actually, Docker uses the volume driver plugins to manage the storage drivers. Volume driver plugin provides volumes.
 - We can use the following command to list the volume driver plugins:
 
 ```bash
