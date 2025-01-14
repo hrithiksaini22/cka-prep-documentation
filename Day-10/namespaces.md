@@ -25,7 +25,8 @@ ip link set veth-interface_name netns interface_name # To set
 ip addr add 192.168.15.1 dev veth-ns_name # To add the IP address
 ```
 - The above command will add the network interface to the namespace.
-
+do this for the other host as well.
+![WhatsApp Image 2025-01-14 at 12 01 30_1574cd5e](https://github.com/user-attachments/assets/c16d0cb5-0918-4f7c-b2b1-20100aa9f76d)
 
 ### Linux Bridge
 
