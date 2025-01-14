@@ -41,6 +41,7 @@ ip route add Destination_Network(192.168.2.0/24) via Gateway(192.168.2.1)
 ```bash
 ip route add default via Gateway(192.168.2.1)
 ```
+![WhatsApp Image 2025-01-14 at 10 43 46_f8a19bd0](https://github.com/user-attachments/assets/64e5954b-37a2-4db5-93a2-19d1f05a49e5)
 
 ### Using Host as a Router:
 
