@@ -117,3 +117,11 @@ whenever we edit the service file, we restart the service always to apply the ch
 By running kubectl config use-context context-name, you tell kubectl which cluster to interact with. Without this command, kubectl won't know which cluster to use when you run commands, so it defaults to the current context.
 
 In summary, it's necessary to use this command to switch between clusters and avoid interacting with the wrong one.
+
+q) How many nodes are part of the ETCD cluster that etcd-server is a part of?
+etcd-server ~ ➜  ETCDCTL_API=3 etcdctl \
+  --endpoints=https://127.0.0.1:2379 \
+  --cacert=/etc/etcd/pki/ca.pem \
+  --cert=/etc/etcd/pki/etcd.pem \
+  --key=/etc/etcd/pki/etcd-key.pem \
+   member list
