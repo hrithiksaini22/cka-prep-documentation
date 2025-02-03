@@ -9,7 +9,7 @@
 - Whether it is for Education, Development, Testing, Production, or for any other purpose.
 - For Example: If it for learning we can `minikube` or single node cluster with kubeadm, AKS, GKE, EKS, etc.,
 - For Development, Testing we can setup multi node cluster with one master and multiple worker nodes using kubeadm or any other managed services.
-- For Production, We can setup Mutli node Cluster iwth Multiple Master nodes.
+- For Production, We can setup Mutli node Cluster with Multiple Master nodes. upto 5000nodes, 150,000 pods, 300,00 total container, 100 pods per node.
 
 ### Hosting Infrastucture:
 
