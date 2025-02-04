@@ -50,6 +50,7 @@
 
 By using Custom Resources, CRDs, and Custom Controllers, you can extend Kubernetes to manage your own application-specific objects and automate their lifecycle.
 
+### Operator Framework
 The Operator Framework is an open-source toolkit designed to manage Kubernetes-native applications, known as Operators, in an effective, automated, and scalable way. It consists of several components that aid in the development, deployment, and management of Operators:
 
 1. **Operator SDK**: Provides tools and libraries to help developers build, test, and package Operators. It offers high-level APIs, useful abstractions, and project scaffolding to simplify the development process.
