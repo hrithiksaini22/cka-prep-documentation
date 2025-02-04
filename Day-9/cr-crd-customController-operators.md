@@ -49,3 +49,14 @@
 - **Example**: A custom controller might watch for changes to a custom resource representing a database and automatically create or update the database based on the resource's spec.
 
 By using Custom Resources, CRDs, and Custom Controllers, you can extend Kubernetes to manage your own application-specific objects and automate their lifecycle.
+
+The Operator Framework is an open-source toolkit designed to manage Kubernetes-native applications, known as Operators, in an effective, automated, and scalable way. It consists of several components that aid in the development, deployment, and management of Operators:
+
+1. **Operator SDK**: Provides tools and libraries to help developers build, test, and package Operators. It offers high-level APIs, useful abstractions, and project scaffolding to simplify the development process.
+
+2. **Operator Lifecycle Manager (OLM)**: Manages the installation, update, and lifecycle of Operators on a Kubernetes cluster. It provides a declarative way to install and manage Operators, ensuring cluster stability and discoverability of Operators and their services.
+
+3. **OperatorHub**: A central repository for discovering and sharing Operators. It provides a catalog of existing Operators and guidance for contributing new ones.
+
+The goal of the Operator Framework is to encapsulate operational knowledge into software, automating common tasks such as installation, configuration, updates, backups, and failovers. This allows applications to be managed as single objects, exposing only the necessary configuration options.
+
