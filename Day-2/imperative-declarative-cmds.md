@@ -43,3 +43,7 @@
 - **Update Deployment**: `kubectl apply -f deployment-definition-file.yaml`
 
 Commit Date: 03/03/2024
+Create a pod called httpd using the image httpd:alpine in the default namespace. Next, create a service of type ClusterIP by the same name (httpd). The target port for the service should be 80.
+
+Try to do this with as few steps as possible.
+---- kubectl run httpd --image=httpd:alpine --port=80 --expose
