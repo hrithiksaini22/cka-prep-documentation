@@ -13,5 +13,6 @@ kubectl logs -f <pod-name>
 ```bash
 kubectl logs -f <pod-name> -c <container-name>
 ```
-
+to deploy metric server-
+kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
 Date of Commit: 07/03/2024
