@@ -108,3 +108,5 @@ The main goal of this configuration is to **rewrite incoming URL paths** before 
 
 - **Rewrite Target** helps you control and customize the URL path that's forwarded to the backend.
 - It simplifies routing when backend services expect requests at the root path (`/`) and not with a specific prefix like `/watch` or `/wear`.
+ imperative commands for ingress-
+k create ingress ingress-pay -n critical-space --rule="/pay=pay-service:8282"
