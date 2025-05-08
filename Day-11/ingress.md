@@ -110,3 +110,4 @@ The main goal of this configuration is to **rewrite incoming URL paths** before 
 - It simplifies routing when backend services expect requests at the root path (`/`) and not with a specific prefix like `/watch` or `/wear`.
  imperative commands for ingress-
 k create ingress ingress-pay -n critical-space --rule="/pay=pay-service:8282"
+add annotation for rewrite rules from k8 doc
