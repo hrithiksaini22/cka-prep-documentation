@@ -218,3 +218,98 @@ Chart Directory Structure:
     charts/ - Directory for dependency charts.
 
 
+Helm CLI Operations - Overview
+
+Helm CLI Basics:
+
+The Helm command line interface (CLI) is used for managing Kubernetes applications using Helm charts.
+
+Commands follow the structure: helm <command> <options>.
+
+Common Commands:
+
+helm help - Displays a list of available Helm commands.
+
+helm <command> --help - Displays help for a specific command.
+
+Example:
+
+helm help
+helm install --help
+
+Searching for Charts:
+
+Helm provides two main ways to search for charts: hub (Artifact Hub) and repo (specific repositories).
+
+helm search hub <keyword> - Searches the Artifact Hub.
+
+helm search repo <keyword> - Searches the locally added repositories.
+
+Example:
+
+helm search hub wordpress
+helm search repo wordpress
+
+Adding Repositories:
+
+Before installing a chart, the repository must be added using the helm repo add command.
+
+helm repo update refreshes the repository index to get the latest charts.
+
+Example:
+
+helm repo add bitnami https://charts.bitnami.com/bitnami
+helm repo update
+
+Installing a Chart:
+
+The helm install command installs a new release using a specified chart.
+
+helm install <release-name> <repo/chart>
+
+Example:
+
+helm install my-wordpress bitnami/wordpress
+
+Listing Releases:
+
+helm list lists all installed releases in the cluster.
+
+Example:
+
+helm list
+
+Upgrading a Release:
+
+To apply updates to a release, use the helm upgrade command.
+
+Example:
+
+helm upgrade my-wordpress bitnami/wordpress
+
+Rolling Back a Release:
+
+To revert a release to a previous state, use the helm rollback command with the revision number.
+
+Example:
+
+helm rollback my-wordpress 1
+
+Uninstalling a Release:
+
+To remove a release, use the helm uninstall command.
+
+Example:
+
+helm uninstall my-wordpress
+
+Managing Repositories:
+
+helm repo list - Lists all added repositories.
+
+helm repo remove <repo-name> - Removes a specific repository.
+
+Example:
+
+helm repo list
+helm repo remove bitnami
