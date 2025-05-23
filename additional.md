@@ -53,3 +53,55 @@ Get the IP of the nginx-resolver pod and replace the dots(.) with hyphon(-) whic
 
 kubectl get pod nginx-resolver -o wide
 kubectl run test-nslookup --image=busybox:1.28 --rm -it --restart=Never -- nslookup <P-O-D-I-P.default.pod> > /root/CKA/nginx.pod
+
+3) whats the difference between --kubeconfig=/etc/kubernetes/kubelet.conf --config=/var/lib/kubelet/config.yaml
+ChatGPT said:
+
+Great question! The two flags:
+
+    --kubeconfig=/etc/kubernetes/kubelet.conf
+
+    --config=/var/lib/kubelet/config.yaml
+
+are used by the Kubelet, but they serve different purposes.
+🔹 1. --kubeconfig=/etc/kubernetes/kubelet.conf
+
+This flag specifies how the Kubelet communicates with the Kubernetes API server.
+
+    It points to the kubeconfig file that contains:
+
+        API server endpoint (e.g., https://<control-plane>:6443)
+
+        Authentication credentials (certificates, tokens)
+
+        Context and cluster configuration
+
+✅ This is essential for the Kubelet to register with the cluster, receive Pod specs, and report node health.
+🔹 2. --config=/var/lib/kubelet/config.yaml
+
+This flag points to the Kubelet’s configuration file, which defines runtime behavior.
+
+    It configures the internal behavior of the Kubelet, including:
+
+        cgroupDriver
+
+        clusterDNS
+
+        authentication/authorization
+
+        eviction thresholds
+
+        staticPodPath
+
+        and many other Kubelet runtime settings
+
+✅ This is used to fine-tune how the Kubelet runs and manages Pods on the node.
+✅ Summary
+Flag	Purpose
+--kubeconfig	Auth info to connect to the API server
+--config	Defines how the Kubelet should behave (its settings)
+🧠 Think of it like this:
+
+    --kubeconfig is how Kubelet talks to the cluster.
+
+    --config is how Kubelet talks to itself (i.e., runs locally).
